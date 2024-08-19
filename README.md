@@ -76,4 +76,4 @@
     git push
     ```
 
-**Tham khảo cuốn sách (ProGit)[./progit.pdf] hoặc các tài liệu khác nếu muốn tìm hiểu thêm về branching, merging, pull request, và làm việc nhóm**
+**Tham khảo cuốn sách ProGit tại repo này hoặc (tại đây)[https://git-scm.com/book/en/v2] hoặc các tài liệu khác nếu muốn tìm hiểu thêm về branching, merging, pull request, và làm việc nhóm**
