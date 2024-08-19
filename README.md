@@ -2,74 +2,76 @@
 
 ## Git
 
-1. Download Git (tại đây)[https://git-scm.com/download/win] 
+1. **Tải Git**  
+   Tải Git từ trang chính thức: [Tải Git cho Windows](https://git-scm.com/download/win)
 
-2. Cài đặt Git
+2. **Cài đặt Git**  
+   Tiến hành cài đặt Git bằng cách làm theo hướng dẫn trên màn hình.
 
-3. Mở cmd (Command Prompt) để kiểm tra
-```bash
-git --version
-```
+3. **Kiểm tra cài đặt**  
+   Mở Command Prompt (cmd) và nhập lệnh sau để kiểm tra phiên bản Git:
+   ```bash
+   git --version
+   ```
 
-4. Config name và mail cho Git (chỉ cần config khi lần đầu tiên cài đặt Git)
-```bash
-git config --global user.name "hoaideptryvcl"
-git config --global user.email "hoaideptryvcl@example.com"
-```
+4. **Cấu hình thông tin người dùng** (Chỉ cần thực hiện khi cài đặt Git lần đầu)
+   ```bash
+   git config --global user.name "Tên của bạn"
+   git config --global user.email "email@example.com"
+   ```
 
-5. Khởi tạo git repo cục bộ (tại thư mục cần tạo ví dụ D:/Example/)
-```bash
-git init
-```
+5. **Khởi tạo kho lưu trữ (repository) Git cục bộ**  
+   Di chuyển đến thư mục mà bạn muốn khởi tạo repo (ví dụ: D:/Example/) và nhập:
+   ```bash
+   git init
+   ```
 
-6. Thêm các thay đổi vào Staging Area
-```bash
-git add <ten_file>
-```
-hoặc
-```bash
-git add .
-```
-**Thay `<ten_file>` bằng tên file trên thực tế ví dụ `git add main.cpp`**
+6. **Thêm thay đổi vào Staging Area**  
+   Thêm một tệp cụ thể vào Staging Area:
+   ```bash
+   git add <tên_file>
+   ```
+   Hoặc thêm tất cả các tệp đã thay đổi:
+   ```bash
+   git add .
+   ```
+   **Lưu ý**:  
+   - Thay `<tên_file>` bằng tên tệp thực tế, ví dụ: `git add main.cpp`.
+   - Lệnh `git add .` sẽ thêm tất cả các tệp đã thay đổi (so với commit gần nhất) vào Staging Area.
 
-**`git add .` sẽ thêm toàn bộ file có thay đổi (so với commit gần nhất) vào staging area**
+7. **Commit các thay đổi**  
+   Lưu các thay đổi vào local repository:
+   ```bash
+   git commit -m "Nội dung commit"
+   ```
+   **Lưu ý**: Thay `"Nội dung commit"` bằng thông điệp commit thực tế, ví dụ: `git commit -m "Thêm README.md"`
 
-7. Commit các thay đổi vào local repo
-```bash
-git commit -m "commit message"
-```
-**Thay `commit message` bằng commit message trên thực tế, ví dụ `git commit -m "add README.md"`**
+8. **Tạo kho lưu trữ (repository) trên GitHub**  
+   - Truy cập GitHub và tạo một repo mới (khuyến nghị chọn chế độ public để dễ kết nối).
+   - Sao chép URL của repo vừa tạo, ví dụ: `https://github.com/username/example.git`.
 
-8. Tạo remote repo trên GitHub (public)
+9. **Kết nối repo cục bộ với repo trên GitHub**  
+   Sử dụng lệnh sau để kết nối:
+   ```bash
+   git remote add origin <repo_url>
+   ```
+   **Lưu ý**: Thay `<repo_url>` bằng URL repo thực tế, ví dụ: `git remote add origin https://github.com/username/example.git`
 
-**Lưu ý: để cho dễ thì tạm thời cứ tạo repo public thôi để dễ connect**
+10. **Push từ local lên GitHub**  
+    Thực hiện lệnh sau để push lần đầu:
+    ```bash
+    git push -u origin main
+    ```
+    Với các lần push sau, chỉ cần thực hiện:
+    ```bash
+    git push
+    ```
 
-Sau đó copy lại url của remote repo, ví dụ: https://github.com/hoaideptryvcl/example.git
+    **Lưu ý**: Sau khi có thay đổi mới, bạn chỉ cần thực hiện lại ba bước: `git add`, `git commit`, và `git push`.
 
-9. Kết nối Local với Remote
-
-```bash
-git remote add origin <repo_url>
-```
-**Thay `<repo_url>` bằng repo url trên thực tế**
-
-ví dụ `git remote add origin https://github.com/hoaideptryvcl/example.git`
-
-10. Push từ local lên remote
-```bash
-git push -u origin main
-```
-cho lần push đầu (lần đầu của repo này thôi, repo khác thì lại phải như này)
-```bash
-git push
-```
-cho các lần push sau
-
-**Nếu sau này có thay đổi gì chỉ cần lần lượt thực hiện 3 bước, `git add`, `git commit`, và `git push`**
-
-Ví dụ
-```bash
-git add main.cpp
-git commit -m "add main.cpp"
-git push
-```
+    Ví dụ:
+    ```bash
+    git add main.cpp
+    git commit -m "Thêm main.cpp"
+    git push
+    ```
