@@ -1,6 +1,6 @@
 # Hướng dẫn sử dụng Git và GitHub cơ bản
 
-## Git
+## Git & GitHub
 
 1. **Tải Git**  
    Tải Git từ trang chính thức: [Tải Git cho Windows](https://git-scm.com/download/win)
