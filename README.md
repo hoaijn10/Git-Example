@@ -75,3 +75,5 @@
     git commit -m "Thêm main.cpp"
     git push
     ```
+
+**Tham khảo cuốn sách ProGit hoặc các tài liệu khác nếu muốn tìm hiểu thêm về branching, merging, pull request, và làm việc nhóm**
